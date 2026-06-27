@@ -1,84 +1,96 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>RIFT Verification</title>
-  <style>
-    body{
-      background:#000;
-      color:#fff;
-      font-family:-apple-system,sans-serif;
-      margin:0;
-      padding:20px;
-    }
-    .card{
-      background:#111;
-      border-radius:20px;
-      padding:20px;
-      margin-top:20px;
-    }
-    .verify{
-      background:#fff;
-      color:#000;
-      border-radius:20px;
-      padding:20px;
-      display:flex;
-      align-items:center;
-      gap:15px;
-    }
-    .check{
-      width:50px;
-      height:50px;
-      background:#4CAF50;
-      border-radius:50%;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      color:#fff;
-      font-size:30px;
-    }
-    img{
-      width:100%;
-      border-radius:15px;
-      margin-top:15px;
-    }
-    .title{
-      font-size:34px;
-      font-weight:700;
-      margin-top:10px;
-    }
-    .muted{
-      color:#888;
-      letter-spacing:2px;
-      font-size:14px;
-    }
-  </style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RIFT Verification</title>
+<style>
+body{margin:0;background:#000;color:white;font-family:Arial,sans-serif;padding:28px}
+.loader{position:fixed;inset:0;background:#000;display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:10;animation:hide 1s forwards;animation-delay:2.3s}
+@keyframes hide{to{opacity:0;visibility:hidden}}
+.logo{font-size:36px;font-weight:bold;letter-spacing:18px;margin-left:18px}
+.spin{width:80px;height:80px;border:4px solid #222;border-top:4px solid #fff;border-radius:50%;animation:spin 1s linear infinite;margin:45px}
+@keyframes spin{to{transform:rotate(360deg)}}
+.checking{color:#999;letter-spacing:6px;font-size:14px}
+.top{display:flex;justify-content:space-between;align-items:center;margin:20px 0 35px}
+.brand{font-size:30px;font-weight:bold;letter-spacing:12px}
+.badge{border:1px solid #333;border-radius:30px;padding:8px 14px;color:#aaa;font-size:12px;letter-spacing:3px}
+.verified{background:white;color:black;border-radius:24px;padding:24px;display:flex;gap:18px;align-items:center;margin-bottom:28px}
+.circle{background:#4caf50;color:white;width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:42px}
+.verified h2{margin:0;font-size:20px;letter-spacing:3px}
+.verified p{margin:8px 0 0;color:#666;letter-spacing:3px;font-weight:bold}
+.card{background:white;color:black;border-radius:24px;padding:28px;margin-bottom:28px}
+.card h2{font-size:18px;letter-spacing:3px}
+.product{height:310px;display:flex;align-items:center;justify-content:center;gap:25px}
+.shirt{width:42%;height:190px;background:#050505;clip-path:polygon(22% 18%,38% 8%,62% 8%,78% 18%,100% 32%,86% 62%,74% 50%,74% 100%,26% 100%,26% 50%,14% 62%,0 32%)}
+.back{position:relative}
+.back:after{content:"F*CK\A SOCIETY";white-space:pre;position:absolute;top:55px;left:0;right:0;text-align:center;color:#ddd;font-size:24px;font-weight:bold;line-height:.9}
+.collection{color:#999;letter-spacing:6px;font-weight:bold}
+.title{font-size:34px;font-weight:bold}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.box{background:#222;border-radius:18px;padding:18px}
+.label{color:#999;letter-spacing:4px;font-size:12px;font-weight:bold;margin-bottom:12px}
+.value{font-size:20px;font-weight:bold}
+.desc-title{color:#aaa;letter-spacing:6px;margin-top:35px;font-size:13px;font-weight:bold}
+.desc{color:#bbb;font-size:18px;line-height:1.6}
+.line{height:1px;background:#222;margin:35px 0}
+.scan{color:#999;letter-spacing:2px;line-height:1.5}
+.footer{text-align:center;color:#222;letter-spacing:10px;font-weight:bold;margin-top:60px}
+</style>
 </head>
 <body>
 
-  <h1>RIFT</h1>
+<div class="loader">
+  <div class="logo">RIFT</div>
+  <div class="spin"></div>
+  <div class="checking">CHECKING AUTHENTICATION...</div>
+</div>
 
-  <div class="verify">
-    <div class="check">✓</div>
-    <div>
-      <strong>PRODUCT VERIFIED</strong><br>
-      Genuine RIFT item confirmed
-    </div>
-  </div>
+<div class="top">
+  <div class="brand">RIFT</div>
+  <div class="badge">● NFC VERIFIED</div>
+</div>
 
-  <div class="card">
-    <div class="muted">COLLECTION: JULY 2026</div>
-    <div class="title">F*CK SOCIETY TEE</div>
+<div class="verified">
+  <div class="circle">✓</div>
+  <div>
+    <h2>✓ PRODUCT VERIFIED</h2>
+    <p>GENUINE RIFT ITEM CONFIRMED</p>
+  </div>
+</div>
 
-    <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=1200&auto=format&fit=crop" alt="shirt">
+<div class="card">
+  <h2>FUCK SOCIETY NFC T-SHIRT</h2>
+  <div class="product">
+    <div class="shirt"></div>
+    <div class="shirt back"></div>
+  </div>
+</div>
 
-    <p>
-      No society's approval needed. Born to break rules.<br>
-      Stand out. F*CK.
-    </p>
+<p class="collection">COLLECTION: JULY 2026</p>
+<div class="title">F*CK SOCIETY TEE</div>
 
-    <p class="muted">Scanned via NFC chip • Authenticated just now</p>
-  </div>
+<div class="grid">
+  <div class="box"><div class="label">STATUS</div><div class="value">• Authentic</div></div>
+  <div class="box"><div class="label">COLLECTION</div><div class="value">July 2026</div></div>
+  <div class="box"><div class="label">BRAND</div><div class="value">RIFT</div></div>
+  <div class="box"><div class="label">TYPE</div><div class="value">Limited Drop</div></div>
+</div>
+
+<div class="desc-title">DESCRIPTION</div>
+<div class="desc">
+No society's approval needed. Born to break others' rules.<br>
+Not afraid to be different. Let them judge, let them talk.<br>
+Stand out. F*CK
+</div>
+
+<div class="line"></div>
+
+<div class="scan">
+Scanned via NFC chip<br>
+AUTHENTICATED · JUST NOW
+</div>
+
+<div class="footer">RIFT</div>
 
 </body>
 </html>
